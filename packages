@@ -1,0 +1,21 @@
+awesome vim vim-gui-common vim-nox git tig radiotray chromium-browser thunar
+gmail-notify numlockx htop mosh mupdf
+
+ranger gimp meld imagemagick curl bpython gparted tree graphviz realpath
+
+python-tornado pyflakes pep8 feh python-numpy python-scipy python-pygame
+python-cairo python-setuptools python-coverage python-gtk2 python-mysqldb
+python-sqlalchemy python-pip python-matplotlib python-docutils
+
+mpi-default-dev build-essential subversion gettext liblua5.1-dev libsdl1.2-dev
+libsigc++-2.0-dev binutils-dev nasm libasound2 ocaml ocaml-native-compilers
+opam camlp4-extra menhir g++-multilib bison flex mysql-server mysql-workbench
+ruby-sass
+
+texlive-base texlive-latex-extra texlive-fonts-recommended texlive-extra-utils
+texlive-bibtex-extra kbibtex
+
+gstreamer0.10-plugins-bad gstreamer0.10-plugins-ugly gstreamer0.10-plugins-good
+gconf-editor
+
+libncurses5-dev openjdk-7-jdk ant libnotify-bin
