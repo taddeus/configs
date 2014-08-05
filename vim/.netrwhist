@@ -1,7 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/home/taddeus/programming/s2e/s2e/qemu/s2e'
-let g:netrw_dirhist_2='/home/taddeus/programming/s2e/s2e/qemu'
-let g:netrw_dirhist_3='/home/taddeus/programming/s2e/s2e/qemu/s2e'
-let g:netrw_dirhist_4='/home/taddeus/programming/s2e/s2e/qemu/s2e/Plugins/thesis'
-let g:netrw_dirhist_5='/etc/wpa_supplicant'
