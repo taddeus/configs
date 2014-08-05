@@ -1,5 +1,7 @@
-awesome vim vim-gui-common vim-nox git tig radiotray chromium-browser thunar
+awesome vim vim-gui-common vim-nox git tig radiotray chromium thunar
 gmail-notify numlockx htop mosh mupdf
+
+xfce4 xfce4-power-manager xfce4-screenshooter
 
 ranger gimp meld imagemagick curl bpython gparted tree graphviz realpath
 
