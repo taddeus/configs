@@ -106,6 +106,9 @@ set nocp            " Disable Vi-compatibility
 filetype plugin indent on
 syntax enable
 
+" pathogen
+execute pathogen#infect()
+
 autocmd BufReadPre *.pdf set ro nowrap
 autocmd BufReadPost *.pdf silent %!pdftotext "%" -nopgbrk -layout -q -eol unix -
 
