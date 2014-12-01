@@ -3,7 +3,7 @@ gmail-notify numlockx htop mosh mupdf irssi screen
 
 xfce4 xfce4-power-manager xfce4-screenshooter gtk2-engines
 
-ranger gimp meld imagemagick curl bpython gparted tree graphviz realpath
+ranger gimp meld imagemagick curl bpython gparted tree graphviz realpath xclip
 
 python-tornado pyflakes pep8 feh python-numpy python-scipy python-pygame
 python-cairo python-setuptools python-coverage python-gtk2 python-mysqldb
