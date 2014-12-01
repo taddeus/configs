@@ -191,3 +191,6 @@ au BufNewFile,BufRead *.less set filetype=less
 set fileformats=unix
 
 let mapleader=","
+
+" Pathogen
+execute pathogen#infect()
