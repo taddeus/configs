@@ -1,196 +1,126 @@
-set ruler
-hi SpellBad     guisp=#fcaf3e cterm=underline
-set expandtab
-set modeline
+" -------------
+" General setup
+" -------------
 
-set tabstop=4     " a tab is four spaces
-set backspace=indent,eol,start
-                  " allow backspacing over everything in insert mode
-set autoindent    " always set autoindenting on
-set copyindent    " copy the previous indentation on autoindenting
-set number        " always show line numbers
-set shiftwidth=4  " number of spaces to use for autoindenting
-set shiftround    " use multiple of shiftwidth when indenting with '<' and '>'
-set ignorecase    " ignore case when searching
-set smartcase     " ignore case if search pattern is all lowercase,
-                  "    case-sensitive otherwise
-set smarttab      " insert tabs on the start of a line according to
-                  "    shiftwidth, not tabstop
-set hlsearch      " highlight search terms
-set incsearch     " show search matches as you type
+filetype plugin indent on
+syntax enable
 
-set history=1000    " remember more commands and search history
-set undolevels=1000 " use many muchos levels of undo
-set wildignore=*.swp,*.bak,*.pyc,*.class,*.old
+" Automatically remove all trailing whitespace
+autocmd BufWritePre * :%s/\s\+$//e
 
-set textwidth=79
-set vb t_vb=
-
-set ls=2          " always display filename
-
-" IMPORTANT: Uncomment one of the following lines to force
-" using 256 colors (or 88 colors) if your terminal supports it,
-" but does not automatically use 256 colors by default.
-
-" -- run in gnome-terminal: --
-" export TERM="xterm-256color"
-"
-set t_Co=88
-
-if $TERM == 'xterm-256color'
-	set t_Co=256
-endif
-
-" ,rl = run pdflatex (on current file)
-map ,rl :!pdflatex -src -shell-escape -interaction=nonstopmode %
-
-" trigger pdflatex (above) on FileWritePost event
-":autocmd BufWritePost *.tex :!pdflatex -src -shell-escape -interaction=nonstopmode % | grep -A 4 -i "error"
-:autocmd BufNewFile,BufRead *.tex :set spell
-
-"augroup vimrc_autocmds
-"    autocmd BufEnter * highlight OverLength ctermbg=darkgrey guibg=#592929
-"    autocmd BufEnter * match OverLength /\%81v.*/
-"augroup END
-
-" configure tags - add additional tags here or comment out not-used ones
-" cd /usr/include
-" ctags -R --sort=yes --fields=+iaS -f ~/.vim/tags/stdc stdio.h stdlib.h \
-"   pthread.h math.h assert.h errno.h malloc.h strings.h fcntl.h unistd.h
-" ctags -R --sort=yes --fields=+iaS -f ~/.vim/tags/gl GL/
-"set tags+=~/.vim/tags/stdc
-"set tags+=~/.vim/tags/gl
-
-
-" build tags of your own project with CTRL+F12
-"map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
-"noremap <F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<cr>
-"inoremap <F12> <Esc>:!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<cr>
-
-"" OmniCppComplete
-"let OmniCpp_NamespaceSearch = 1
-"let OmniCpp_GlobalScopeSearch = 1
-"let OmniCpp_ShowAccess = 1
-"let OmniCpp_MayCompleteDot = 1
-"let OmniCpp_MayCompleteArrow = 1
-"let OmniCpp_MayCompleteScope = 1
-"let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
-
-"" automatically open and close the popup menu / preview window
+" Source completion
+" Automatically open and close the popup menu / preview window
+"set omnifunc=syntaxcomplete#Complete
 "au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
-""set completeopt=menuone,menu,longest,preview
-"set completeopt=menuone,menu " ,longest,preview
+"set completeopt=menuone,menu,longest,preview
 
-"set nocp
-filetype plugin on
+" ------
+" Layout
+" ------
 
+" try 256 color mode if envvar is set
+set t_Co=88
+if $TERM == 'xterm-256color' | set t_Co=256 | endif
+
+" Color scheme
 "set background=dark
 "colorscheme darkspectrum
 runtime! plugin/guicolorscheme.vim
 GuiColorScheme darkspectrum
 
-" Wildmenu
-set wildmenu        " use wildmenu
-set wildcharm=<TAB> " autocomplete
-set wildignore=*.swp,*.bak,*.pyc,*.class,*.old
+set fileformats=unix    " obviously...
+set ruler               " show cursor location
+set modeline            " read modelines
+set number              " show line numbers
+set title               " change the terminal's title
+set nocompatible        " disable Vi-compatibility
+set laststatus=2        " always display filename
+set textwidth=79        " break line at 79 chars
 
-" ------------------
-" Various vim tweaks
-" ------------------
-set title           " change the terminal's title
-set visualbell      " don't beep
-set noerrorbells    " don't beep
-set nocp            " Disable Vi-compatibility
+" Tabs are for heathens, we indent with spaces
+set expandtab smarttab
+set shiftwidth=4 tabstop=8 softtabstop=0
+set autoindent copyindent
+set shiftround
+set backspace=indent,eol,start
 
-" syntax detection and filetype indention
-filetype plugin indent on
-syntax enable
+" Don't give people epilepsy
+set visualbell t_vb= noerrorbells
 
-" pathogen
-execute pathogen#infect()
+" Enable wildmenu for browsing files in :e command
+set wildmenu
+set wildcharm=<TAB>
+set wildignore=*.swp,*.bak,*.pyc,*.class,*.o,*.bc
 
-autocmd BufReadPre *.pdf set ro nowrap
-autocmd BufReadPost *.pdf silent %!pdftotext "%" -nopgbrk -layout -q -eol unix -
-
-" C syntax highlighting for CiviC files
-au BufNewFile,BufRead *.cvc set filetype=c
-
-" Automatically remove all trailing spaces
-autocmd BufWritePre * :%s/\s\+$//e
-
-" -----------------
-" Source completion
-" -----------------
-au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
-"set completeopt=menuone,menu
-
-" --------------
-" Source folding
-" --------------
-"set foldmethod=indent
-
-" -------------
 " File explorer
-" -------------
+let g:netrw_liststyle=3  " Use tree-mode as default view
+let g:netrw_preview=1    " Preview window shown in a vertically split
 
-let g:netrw_liststyle=3    " Use tree-mode as default view
-"let g:netrw_browse_split=4 " Open file in previous buffer
-let g:netrw_preview=1      " Preview window shown in a vertically split
+" ---------
+" Searching
+" ---------
 
-" ------------
-" Key bindings
-" ------------
+set history=1000 undolevels=1000
+set wildignore=*.swp,*.bak,*.pyc,*.class,*.old
+set hlsearch    " highlight search terms
+set incsearch   " show search matches as you type
+set smartcase   " clever case sensitivity
 
-" skip the press and hold 'shift' + press ';' + release 'shift'.
-" Now you can simply use ';' instead of ':'.
+" -----------------------
+" Key bindings / commands
+" -----------------------
+
+" Use ';' instead of ':'
 nnoremap ; :
 
 " Use Q for formatting the current paragraph (or selection)
 vmap Q gq
 nmap Q gqap
 
-" Unbind Shift + up/down
-vmap <s-up> <up>
-nmap <s-up> <up>
-vmap <s-down> <down>
-nmap <s-down> <down>
+" Solve line jumping with long, wrapped lines (use [jk] for normal behaviour)
+nnoremap <down> gj
+nnoremap <up> gk
 
-" If you like long lines with line wrapping enabled, this solves the problem
-" that pressing down jumpes your cursor “over” the current line to the next
-" line. It changes behaviour so that it jumps to the next row in the editor.
-nnoremap j gj
-nnoremap k gk
-
-" Easy window navigation
+" Window navigation with ctrl + [hjkl]
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-" It clears the search buffer (and highlighting) when you press ,/
-nmap <silent> ,/ :nohlsearch<CR>
-nmap <silent> ,mt :!make check<CR>
-nmap <silent> ,mc :!make coverage<CR>
-nmap <silent> ,ml :!make clean<CR>
+" Shortcuts for common commands
+nmap <silent> ,/  :nohlsearch<CR>
 nmap <silent> ,mm :!make<CR>
-nmap <silent> ,mM :!make && make<CR>
-nmap <silent> ,md :!make doc<CR>
+nmap <silent> ,ml :!make clean<CR>
+nmap <silent> ,mt :!make check<CR>
+nmap <silent> ,md :!make dist<CR>
 nmap <silent> ,mb :!make -B<CR>
-nmap <silent> ,a :!ant<CR>
 
-" when you forgot to sudo before editing a file that requires root privileges.
-" This lets you use w!! to do that after you opened the file already:
+" Use w!! to save a file as root if opened with insufficient permissions
 cmap w!! w !sudo tee % >/dev/null
 
+" ---------------
+" Syntax / indent
+" ---------------
+
+" Some files only have 2 spaces indent
+autocmd FileType sass,html set shiftwidth=2
+
+" Tabs in Makefiles are 4 spaces since they are required and thus need not be
+" religiously burned
+autocmd FileType make set tabstop=4
+
+" Make pfd's readable
+autocmd BufReadPre *.pdf set ro nowrap
+autocmd BufReadPost *.pdf silent %!pdftotext "%" -nopgbrk -layout -q -eol unix -
+
+" C syntax highlighting for CiviC files
+autocmd BufNewFile,BufRead *.cvc set filetype=c
+
 " Status line highlight
-:hi StatusLine ctermbg=black ctermfg=grey
+highlight StatusLine ctermbg=black ctermfg=grey
 
 " Syntax highlighting for .less files
-au BufNewFile,BufRead *.less set filetype=less
+autocmd BufNewFile,BufRead *.less set filetype=less
 
-set fileformats=unix
-
-let mapleader=","
-
-" Pathogen
-execute pathogen#infect()
+" Highlight and underline badly spelled words when spellcheck is on
+highlight SpellBad guisp=#fcaf3e cterm=underline
