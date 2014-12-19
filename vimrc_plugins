@@ -12,4 +12,4 @@ call vundle#end()
 
 execute pathogen#infect()
 
-source vimrc
+source ~/cfg/vimrc
