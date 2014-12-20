@@ -39,7 +39,7 @@ set textwidth=79        " break line at 79 chars
 
 " Tabs are for heathens, we indent with spaces
 set expandtab smarttab
-set shiftwidth=4 tabstop=8 softtabstop=0
+set shiftwidth=4 tabstop=8 softtabstop=-1
 set autoindent copyindent
 set shiftround
 set backspace=indent,eol,start
@@ -62,9 +62,9 @@ let g:netrw_preview=1    " Preview window shown in a vertically split
 
 set history=1000 undolevels=1000
 set wildignore=*.swp,*.bak,*.pyc,*.class,*.old
-set hlsearch    " highlight search terms
-set incsearch   " show search matches as you type
-set smartcase   " clever case sensitivity
+set hlsearch                " highlight search terms
+set incsearch               " show search matches as you type
+set ignorecase smartcase    " clever case sensitivity
 
 " -----------------------
 " Key bindings / commands
