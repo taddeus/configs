@@ -66,6 +66,17 @@ set hlsearch                " highlight search terms
 set incsearch               " show search matches as you type
 set ignorecase smartcase    " clever case sensitivity
 
+" ---------------------------
+" Mouse selection & scrolling
+" ---------------------------
+
+"set mouse=a
+
+map <ScrollWheelUp> <C-Y>
+map <S-ScrollWheelUp> <C-U>
+map <ScrollWheelDown> <C-E>
+map <S-ScrollWheelDown> <C-D>
+
 " -----------------------
 " Key bindings / commands
 " -----------------------
