@@ -54,7 +54,7 @@ set wildignore=*.swp,*.bak,*.pyc,*.class,*.o,*.bc
 
 " File explorer
 let g:netrw_liststyle=3  " Use tree-mode as default view
-let g:netrw_preview=1    " Preview window shown in a vertically split
+let g:netrw_preview=1    " Preview window shown in a vsplit
 
 " ---------
 " Searching
@@ -135,3 +135,11 @@ autocmd BufNewFile,BufRead *.less set filetype=less
 
 " Highlight and underline badly spelled words when spellcheck is on
 highlight SpellBad guisp=#fcaf3e cterm=underline
+
+" -----------------------
+" Additional local config
+" -----------------------
+
+if filereadable($HOME . '/.vimrc_local')
+    source ~/.vimrc_local
+endif
