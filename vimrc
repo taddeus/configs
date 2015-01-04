@@ -50,7 +50,7 @@ set visualbell t_vb= noerrorbells
 " Enable wildmenu for browsing files in :e command
 set wildmenu
 set wildcharm=<TAB>
-set wildignore=*.swp,*.bak,*.pyc,*.class,*.o,*.bc
+set wildignore=*.swp,*.bak,*.pyc,*.class,*.o,*.bc,*.old,*.cmi,*.cmx
 
 " File explorer
 let g:netrw_liststyle=3  " Use tree-mode as default view
@@ -61,7 +61,6 @@ let g:netrw_preview=1    " Preview window shown in a vsplit
 " ---------
 
 set history=1000 undolevels=1000
-set wildignore=*.swp,*.bak,*.pyc,*.class,*.old
 set hlsearch                " highlight search terms
 set incsearch               " show search matches as you type
 set ignorecase smartcase    " clever case sensitivity
