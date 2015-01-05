@@ -10,8 +10,6 @@ Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()
 
-execute pathogen#infect()
-
 source ~/cfg/vimrc
 
 let g:ycm_extra_conf_globlist = ['~/programming/*']
