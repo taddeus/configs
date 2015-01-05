@@ -79,6 +79,7 @@ fi
 alias ll='ls -alFh'
 alias la='ls -A'
 alias l='ls -CF'
+alias lsg='git ls-files'
 
 # ssh shortcuts for multivac
 alias smv='ssh mv -tt screen -Uxr'
