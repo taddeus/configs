@@ -89,7 +89,10 @@ alias mvv='mosh mv -p 8215 -- screen -Uxr'
 alias cdhere='cd $(realpath $(pwd))'
 alias ocaml='rlwrap ocaml'
 alias c='xclip -i -selection clipboard'
-alias tm='`which time` -f "real: %e"'
+
+function tm () {
+    `which time` -f %e $* > /dev/null
+}
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
