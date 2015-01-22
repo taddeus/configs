@@ -89,6 +89,7 @@ alias mvv='mosh mv -p 8215 -- screen -Uxr'
 alias cdhere='cd $(realpath $(pwd))'
 alias ocaml='rlwrap ocaml'
 alias c='xclip -i -selection clipboard'
+alias vimdiff='vim -d -c "colorscheme desert"'
 
 function tm () {
     `which time` -f %e $* > /dev/null
