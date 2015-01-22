@@ -90,6 +90,7 @@ alias cdhere='cd $(realpath $(pwd))'
 alias ocaml='rlwrap ocaml'
 alias c='xclip -i -selection clipboard'
 alias vimdiff='vim -d -c "colorscheme desert"'
+alias ydiff='diff -y -W 196 --left-column'
 
 function tm () {
     `which time` -f %e $* > /dev/null
