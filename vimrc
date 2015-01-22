@@ -13,6 +13,7 @@ autocmd BufWritePre * :%s/\s\+$//e
 "set omnifunc=syntaxcomplete#Complete
 "au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
 "set completeopt=menuone,menu,longest,preview
+set completeopt-=preview
 
 " ------
 " Layout
