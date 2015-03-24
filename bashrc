@@ -91,6 +91,7 @@ alias ocaml='rlwrap ocaml'
 alias c='xclip -i -selection clipboard'
 alias vimdiff='vim -d -c "colorscheme desert"'
 alias ydiff='diff -y -W 196 --left-column'
+alias v='gpicview'
 
 function tm () {
     `which time` -f %e $* > /dev/null
