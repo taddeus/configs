@@ -40,7 +40,7 @@ set textwidth=79        " break line at 79 chars
 
 " Tabs are for heathens, we indent with spaces
 set expandtab smarttab
-set shiftwidth=4 tabstop=8 softtabstop=-1
+set shiftwidth=4 tabstop=4 softtabstop=-1
 set autoindent copyindent
 set shiftround
 set backspace=indent,eol,start
