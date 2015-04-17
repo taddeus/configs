@@ -8,6 +8,8 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'Valloric/YouCompleteMe'
 
+Plugin 'wting/rust.vim'
+
 call vundle#end()
 
 source ~/cfg/vimrc
