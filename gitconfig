@@ -1,0 +1,21 @@
+[user]
+    name = Taddeus Kroes
+    email = taddeuskroes@gmail.com
+
+[color]
+    ui = true
+
+[push]
+    default = simple
+
+[alias]
+    tree = log --graph --oneline --all --full-history --decorate
+    lg = log --graph --decorate --all --full-history --date=relative \
+        --format=format:'%C(bold blue)%h%Creset %C(dim bold green)%<(13)%ad%Creset %C(dim white)%an%Creset  %s%C(bold yellow)%d%Creset'
+
+[log]
+    abbrevCommit = true
+    decorate = true
+
+[format]
+    pretty = oneline
