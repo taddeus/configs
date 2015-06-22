@@ -82,8 +82,8 @@ alias l='ls -CF'
 alias lsg='git ls-files'
 
 # ssh shortcuts for multivac
-alias smv='ssh mv -tt screen -Uxr'
-alias mvv='mosh mv -p 8215 -- screen -Uxr'
+alias smv='ssh mvx -tt screen -Uxr'
+alias mvv='mosh mv -p 8051 -- screen -Uxr'
 
 # more alias fancyness
 alias cdhere='cd $(realpath $(pwd))'
