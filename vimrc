@@ -51,7 +51,7 @@ set visualbell t_vb= noerrorbells
 " Enable wildmenu for browsing files in :e command
 set wildmenu
 set wildcharm=<TAB>
-set wildignore=*.swp,*.bak,*.pyc,*.class,*.o,*.bc,*.old,*.cmi,*.cmx
+set wildignore=*.swp,*.bak,*.pyc,*.class,*.o,*.bc,*.old,*.cmi,*.cmx,*.aux
 
 " File explorer
 let g:netrw_liststyle=3  " Use tree-mode as default view
