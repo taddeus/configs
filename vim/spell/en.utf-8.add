@@ -52,3 +52,6 @@ leaderboards
 toolchain
 LLVM
 workflow
+deobfuscates
+toolchain
+plugins
