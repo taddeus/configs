@@ -114,11 +114,7 @@ cmap w!! w !sudo tee % >/dev/null
 " ---------------
 
 " Some files only have 2 spaces indent
-autocmd FileType sass,html set shiftwidth=2
-
-" Tabs in Makefiles are 4 spaces since they are required and thus need not be
-" religiously burned
-autocmd FileType make set tabstop=4
+autocmd FileType sass,html,ocaml set shiftwidth=2
 
 " Make pfd's readable
 autocmd BufReadPre *.pdf set ro nowrap
@@ -130,8 +126,10 @@ autocmd BufNewFile,BufRead *.cvc set filetype=c
 " Status line highlight
 highlight StatusLine ctermbg=black ctermfg=grey
 
-" Syntax highlighting for .less files
+" Syntax highlighting by extension
 autocmd BufNewFile,BufRead *.less set filetype=less
+autocmd BufNewFile,BufRead *.md set filetype=markdown
+autocmd BufNewFile,BufRead *.gv set filetype=dot
 
 " Highlight and underline badly spelled words when spellcheck is on
 highlight SpellBad guisp=#fcaf3e cterm=underline
