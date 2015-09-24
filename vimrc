@@ -114,7 +114,7 @@ cmap w!! w !sudo tee % >/dev/null
 " ---------------
 
 " Some files only have 2 spaces indent
-autocmd FileType sass,html,ocaml set shiftwidth=2
+autocmd FileType sass,html,ocaml,bib,llvm set shiftwidth=2
 
 " Make pfd's readable
 autocmd BufReadPre *.pdf set ro nowrap
@@ -130,6 +130,7 @@ highlight StatusLine ctermbg=black ctermfg=grey
 autocmd BufNewFile,BufRead *.less set filetype=less
 autocmd BufNewFile,BufRead *.md set filetype=markdown
 autocmd BufNewFile,BufRead *.gv set filetype=dot
+autocmd BufNewFile,BufRead *.ll set filetype=llvm
 
 " Highlight and underline badly spelled words when spellcheck is on
 highlight SpellBad guisp=#fcaf3e cterm=underline
