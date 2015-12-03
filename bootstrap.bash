@@ -10,6 +10,6 @@ ln -sf $DIR/gitconfig ~/.gitconfig
 
 source ~/.bashrc
 
-sudo apt-get install -y build-essential cmake python-dev
+sudo apt-get install -y build-essential cmake python-dev vim-nox
 vim +PluginInstall +qall
 cd $DIR/vim/bundle/YouCompleteMe && ./install.sh
