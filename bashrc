@@ -96,8 +96,12 @@ alias v='gpicview'
 alias avg="awk '{a+=\$1} END{print a/NR}'"
 alias json='python -mjson.tool'
 
-function tm () {
+tm () {
     `which time` -f %e $* > /dev/null
+}
+
+mkc() {
+    mkdir -p "$@" && cd "$@"
 }
 
 # Add an "alert" alias for long running commands.  Use like so:
