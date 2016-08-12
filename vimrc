@@ -26,8 +26,12 @@ if $TERM == 'xterm-256color' | set t_Co=256 | endif
 " Color scheme
 "set background=dark
 "colorscheme darkspectrum
-runtime! plugin/guicolorscheme.vim
-GuiColorScheme darkspectrum
+if &diff
+    colorscheme blue
+else
+    runtime! plugin/guicolorscheme.vim
+    GuiColorScheme darkspectrum
+endif
 
 set fileformats=unix    " obviously...
 set ruler               " show cursor location
