@@ -1,8 +1,6 @@
-y
 fiducials
 API
 TUIO
-API's
 interactor
 extendable
 smartphones
@@ -55,11 +53,10 @@ workflow
 deobfuscates
 toolchain
 plugins
-<<<<<<< HEAD
 virtualization
-Program/!
 retargeting
 deinstrumentation
+Deinstrumentation
 obfuscators
 Program
 uncopied
