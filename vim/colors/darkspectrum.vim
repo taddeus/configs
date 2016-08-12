@@ -47,11 +47,6 @@ hi diffAdded    guifg=#44cc44 gui=none
 hi diffChange   guifg=#7fbdff gui=none
 hi diffRemoved  guifg=#aa2723 gui=none
 
-"hi DiffAdd    gui=none guifg=#ffcc7f guibg=none
-"hi DiffChange gui=none guifg=bg guibg=none
-"hi DiffDelete gui=none guifg=bg guibg=none
-"hi DiffText   gui=none guifg=bg guibg=none
-
 hi Number       guifg=#fce94f
 
 hi Folded       guibg=#000000 guifg=#FFFFFF gui=bold

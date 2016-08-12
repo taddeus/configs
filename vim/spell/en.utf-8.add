@@ -60,3 +60,6 @@ virtualization
 Program/!
 retargeting
 deinstrumentation
+obfuscators
+Program
+uncopied
