@@ -94,6 +94,8 @@ alias ydiff='diff -y -W 196 --left-column'
 alias v='gpicview'
 alias avg="awk '{a+=\$1} END{print a/NR}'"
 alias json='python -mjson.tool'
+alias g='grep'
+alias h='help'
 
 # git shortcuts
 alias gs='git status'
@@ -103,6 +105,10 @@ alias gc='git commit'
 alias gp='git push'
 alias gr='git pull --rebase'
 alias m='make'
+
+# apt shortcuts
+alias ag='sudo apt-get'
+alias aps='apt-cache search'
 
 tm () {
     `which time` -f %e $* > /dev/null
