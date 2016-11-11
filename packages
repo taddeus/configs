@@ -1,15 +1,12 @@
-awesome vim vim-nox git tig radiotray chromium-browser thunar numlockx htop
+awesome vim vim-nox git tig radiotray chromium-browser htop
 mosh mupdf irssi screen gpicview
 
-gimp meld imagemagick curl bpython gparted tree graphviz realpath
+meld imagemagick curl bpython gparted tree graphviz realpath
 
 pyflakes pep8 feh python-pip python-matplotlib
 
-build-essential subversion gettext ocaml opam mysql-workbench ruby-sass
+build-essential subversion gettext ocaml opam ruby-sass
 
-texlive-base texlive-latex-extra texlive-bibtex-extra kbibtex
+texlive-base texlive-latex-extra texlive-bibtex-extra
 
-gstreamer0.10-plugins-bad gstreamer0.10-plugins-ugly gstreamer0.10-plugins-good
-gconf-editor
-
-openjdk-7-jdk ant libnotify-bin
+openjdk-9-jdk ant libnotify-bin
