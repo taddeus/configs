@@ -135,6 +135,7 @@ autocmd BufNewFile,BufRead *.less set filetype=less
 autocmd BufNewFile,BufRead *.md set filetype=markdown
 autocmd BufNewFile,BufRead *.gv set filetype=dot
 autocmd BufNewFile,BufRead *.ll set filetype=llvm
+autocmd BufNewFile,BufRead *.inc set filetype=sh
 
 " Highlight and underline badly spelled words when spellcheck is on
 highlight SpellBad guisp=#fcaf3e cterm=underline
