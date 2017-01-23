@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 sudo apt-get install -y git vim-nox
 
@@ -11,3 +11,5 @@ ln -sfT $DIR/vim ~/.vim
 ln -sf $DIR/gitconfig ~/.gitconfig
 
 source ~/.bashrc
+
+vim +PluginInstall +qall

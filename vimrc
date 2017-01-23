@@ -1,8 +1,23 @@
+" --------------
+" Vundle plugins
+" --------------
+
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'rust-lang/rust.vim'
+
+call vundle#end()
+filetype plugin indent on
+
 " -------------
 " General setup
 " -------------
 
-filetype plugin indent on
 syntax enable
 
 " Automatically remove all trailing whitespace
