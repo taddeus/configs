@@ -21,7 +21,7 @@ filetype plugin indent on
 syntax enable
 
 " Automatically remove all trailing whitespace
-autocmd BufWritePre * :%s/\s\+$//e
+"autocmd BufWritePre * :%s/\s\+$//e
 
 " Source completion
 " Automatically open and close the popup menu / preview window
@@ -63,6 +63,10 @@ set shiftwidth=4 tabstop=4 softtabstop=-1
 set autoindent copyindent
 set shiftround
 set backspace=indent,eol,start
+
+" Highlight tabs and trailing spaces
+set listchars=tab:>\ ,trail:-
+set list
 
 " Don't give people epilepsy
 set visualbell t_vb= noerrorbells
@@ -151,6 +155,7 @@ autocmd BufNewFile,BufRead *.md set filetype=markdown
 autocmd BufNewFile,BufRead *.gv set filetype=dot
 autocmd BufNewFile,BufRead *.ll set filetype=llvm
 autocmd BufNewFile,BufRead *.inc set filetype=sh
+autocmd BufNewFile,BufRead *.mustache set filetype=html
 
 " Highlight and underline badly spelled words when spellcheck is on
 highlight SpellBad guisp=#fcaf3e cterm=underline
