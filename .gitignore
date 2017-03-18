@@ -1,4 +1,4 @@
 vim/.*
 *.swp
 vim/bundle/*
-vim/spell/*.spl
+vim/spell/*
