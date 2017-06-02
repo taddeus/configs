@@ -14,6 +14,9 @@ ln -sf $DIR/gitconfig ~/.gitconfig
 ln -sf $DIR/bashrc ~/.bashrc
 source ~/.bashrc
 
+# screen
+ln -sf $DIR/screenrc ~/.screenrc
+
 # vim
 if which vim >/dev/null; then
     ln -sfT $DIR/vim ~/.vim
