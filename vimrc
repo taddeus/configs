@@ -65,7 +65,7 @@ set shiftround
 set backspace=indent,eol,start
 
 " Highlight tabs and trailing spaces
-set listchars=tab:>\ ,trail:-
+set listchars=tab:\|\ ,trail:-
 set list
 
 " Don't give people epilepsy
