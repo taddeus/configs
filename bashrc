@@ -118,6 +118,15 @@ mkc() {
     mkdir -p "$@" && cd "$@"
 }
 
+# Run objdump on a file, open in vim with syntax highlighting
+dis() {
+    if [ ! -f "$1" ]; then
+        echo "dis: file '$1' does not exist"
+        return
+    fi
+    objdump -d $1 | vim -R - "+set ft=dis"
+}
+
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
@@ -131,8 +140,8 @@ alias pcat="pygmentize -f terminal256 -O style=native -g"
 
 export TERM="xterm-256color"
 
-export LC_ALL="en_US.UTF-8"
-export LANG="$LC_ALL"
+#export LC_ALL="en_US.UTF-8"
+#export LANG="$LC_ALL"
 
 export EDITOR=vim
 
