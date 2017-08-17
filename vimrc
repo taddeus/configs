@@ -42,10 +42,10 @@ if $TERM == 'xterm-256color' | set t_Co=256 | endif
 "set background=dark
 "colorscheme darkspectrum
 if &diff
-    colorscheme blue
+    autocmd VimEnter * colorscheme blue
 else
     runtime! plugin/guicolorscheme.vim
-    GuiColorScheme darkspectrum
+    autocmd VimEnter * GuiColorScheme darkspectrum
 endif
 
 set fileformats=unix    " obviously...
