@@ -158,6 +158,7 @@ autocmd BufNewFile,BufRead *.inc set filetype=sh
 autocmd BufNewFile,BufRead *.mustache set filetype=html
 autocmd BufNewFile,BufRead *.ts set filetype=javascript
 autocmd BufNewFile,BufRead *.scss set filetype=sass
+autocmd BufNewFile,BufRead *.fc,*.fh set filetype=fennec
 
 " Highlight and underline badly spelled words when spellcheck is on
 highlight SpellBad guisp=#fcaf3e cterm=underline
