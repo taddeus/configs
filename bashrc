@@ -135,6 +135,9 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 # syntax-highlighted cat
 alias pcat="pygmentize -f terminal256 -O style=native -g"
+pless() {
+    pcat "$@" | less -r
+}
 
 #
 # Environment

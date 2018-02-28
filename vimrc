@@ -55,7 +55,8 @@ set number              " show line numbers
 set title               " change the terminal's title
 set nocompatible        " disable Vi-compatibility
 set laststatus=2        " always display filename
-set textwidth=79        " break line at 79 chars
+set textwidth=80        " break line at 80 chars
+set scrolloff=5         " always keep current line five lines off the screen edge
 
 " Tabs are for heathens, we indent with spaces
 set expandtab smarttab
@@ -137,19 +138,18 @@ cmap w!! w !sudo tee % >/dev/null
 " ---------------
 
 " Some files only have 2 spaces indent
-autocmd FileType css,less,sass,html,ocaml,bib,llvm set shiftwidth=2
+autocmd FileType css,less,sass,html,ocaml,bib,llvm,tex,markdown set shiftwidth=2
 
 " Make pfd's readable
 autocmd BufReadPre *.pdf set ro nowrap
 autocmd BufReadPost *.pdf silent %!pdftotext "%" -nopgbrk -layout -q -eol unix -
 
-" C syntax highlighting for CiviC files
-autocmd BufNewFile,BufRead *.cvc set filetype=c
-
 " Status line highlight
 highlight StatusLine ctermbg=black ctermfg=grey
 
 " Syntax highlighting by extension
+autocmd BufNewFile,BufRead *.cvc set filetype=c
+autocmd BufNewFile,BufRead *.fc set filetype=c
 autocmd BufNewFile,BufRead *.less set filetype=less
 autocmd BufNewFile,BufRead *.md set filetype=markdown
 autocmd BufNewFile,BufRead *.gv set filetype=dot
@@ -159,9 +159,13 @@ autocmd BufNewFile,BufRead *.mustache set filetype=html
 autocmd BufNewFile,BufRead *.ts set filetype=javascript
 autocmd BufNewFile,BufRead *.scss set filetype=sass
 autocmd BufNewFile,BufRead *.fc,*.fh set filetype=fennec
+autocmd BufNewFile,BufRead *.dis set filetype=dis
 
 " Highlight and underline badly spelled words when spellcheck is on
 highlight SpellBad guisp=#fcaf3e cterm=underline
+
+" Auto enable spellchecking for text-based files
+autocmd FileType tex,markdown setlocal spell nonu
 
 " -----------------------
 " Additional local config
