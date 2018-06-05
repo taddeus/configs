@@ -78,7 +78,7 @@ fi
 # ls shortcuts
 alias ll='ls -alFh'
 alias la='ls -A'
-alias l='ls -CF'
+alias l='ls -lFh'
 
 # ssh shortcuts for multivac
 alias smv='ssh mv -tt screen -Uxr'
