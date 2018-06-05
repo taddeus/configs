@@ -104,6 +104,7 @@ alias ga='git add'
 alias gc='git commit'
 alias gp='git push'
 alias gr='git pull --rebase'
+alias grr='git pull --rebase --recurse-submodules'
 alias m='make'
 
 # apt shortcuts
