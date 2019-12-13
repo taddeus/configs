@@ -1,12 +1,14 @@
-awesome vim vim-nox git tig htop owncloud-client
-mosh mupdf screen gpicview xfce4-terminal xfce4-power-manager
+awesome vim vim-nox git tig radiotray chromium-browser htop owncloud-client
+xcompmgr mosh mupdf irssi screen gpicview xfce4-terminal
 
-meld imagemagick curl bpython gparted tree graphviz
+meld imagemagick curl tree graphviz
 
-pyflakes pep8 feh python3-pip
+feh python python-pip pyflakes pep8
 
 build-essential subversion opam ruby-sass
 
-texlive-base texlive-latex-extra texlive-bibtex-extra
+texlive-full
 
-libnotify-bin pavucontrol geary telegram-desktop
+libnotify-bin pavucontrol geary telegram-desktop blueman
+
+apt-file
