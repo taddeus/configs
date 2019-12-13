@@ -13,6 +13,7 @@
     lg = log --graph --decorate --all --full-history --date=relative \
         --format=format:'%C(bold blue)%h%Creset %C(dim bold green)%<(14)%ad%Creset %C(dim white)%an%Creset  %s%C(bold yellow)%d%Creset'
     addnw = !sh -c 'git diff -U0 -w --no-color "$@" | git apply --cached --ignore-whitespace --unidiff-zero -'
+	cloner = clone --recurse-submodules -j8
 
 [log]
     abbrevCommit = true
