@@ -10,6 +10,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'rust-lang/rust.vim'
+Plugin 'fsharp/vim-fsharp'
 
 call vundle#end()
 filetype plugin indent on
