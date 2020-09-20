@@ -14,6 +14,8 @@ Plugin 'embear/vim-localvimrc'
 Plugin 'rust-lang/rust.vim'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'kongo2002/fsharp-vim'
+Plugin 'amiralies/vim-rescript'
+Plugin 'jordwalke/vim-reasonml'
 
 call vundle#end()
 filetype plugin indent on
