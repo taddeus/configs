@@ -9,6 +9,8 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
+Plugin 'embear/vim-localvimrc'
+
 Plugin 'rust-lang/rust.vim'
 Plugin 'kongo2002/fsharp-vim'
 
