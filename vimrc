@@ -12,10 +12,16 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'embear/vim-localvimrc'
 
 Plugin 'rust-lang/rust.vim'
+Plugin 'vim-syntastic/syntastic'
 Plugin 'kongo2002/fsharp-vim'
 
 call vundle#end()
 filetype plugin indent on
+
+let g:syntastic_python_flake8_exec = 'python3'
+let g:syntastic_python_flake8_args = ['-m', 'flake8']
+let g:syntastic_python_python_exec = 'python3'
+let g:syntastic_python_checkers = ['flake8', 'python']
 
 " -------------
 " General setup
