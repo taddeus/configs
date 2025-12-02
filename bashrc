@@ -51,11 +51,16 @@ else
     USERCOLOR="\[\e[01;32m\]"  # Green otherwise
     INDICATOR="$"
 fi
+if [ $USER = taddeus ]; then
+    USERNAME=
+else
+    USERNAME="\u@"
+fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1="${debian_chroot:+($debian_chroot)}$USERCOLOR\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$INDICATOR "
+    PS1="${debian_chroot:+($debian_chroot)}$USERCOLOR$USERNAME\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$INDICATOR "
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$INDICATOR '
+    PS1='${debian_chroot:+($debian_chroot)}'"$USERNAME"'\h:\w\$INDICATOR '
 fi
 unset color_prompt
 
