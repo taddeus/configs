@@ -14,8 +14,8 @@ ln -sf $DIR/gitconfig ~/.gitconfig
 ln -sf $DIR/bashrc ~/.bashrc
 source ~/.bashrc
 
-# screen
-ln -sf $DIR/screenrc ~/.screenrc
+# tmux
+ln -sf $DIR/tmux.conf ~/.tmux.conf
 
 # vim
 if which vim >/dev/null; then
