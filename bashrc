@@ -87,17 +87,12 @@ alias la='ls -A'
 alias l='ls -lFh'
 
 # ssh shortcuts for multivac
-alias smv='ssh mv -tt screen -Uxr'
-alias smx='ssh mvx -tt screen -Uxr'
 alias mvv='mosh mv -p 8051 -- screen -Uxr'
 
 # more alias fancyness
 alias cdhere='cd $(realpath $(pwd))'
-alias ocaml='rlwrap ocaml'
-alias c='xclip -i -selection clipboard'
 alias vimdiff='vim -d -c "colorscheme desert"'
 alias ydiff='diff -y -W 196 --left-column'
-alias v='gpicview'
 alias avg="awk '{a+=\$1} END{print a/NR}'"
 alias json='python -mjson.tool'
 alias g='grep'
@@ -118,7 +113,7 @@ alias apt='sudo apt'
 alias api='apt install'
 alias aps='\apt search'
 
-tm () {
+mytime () {
     `which time` -f %e $* > /dev/null
 }
 
