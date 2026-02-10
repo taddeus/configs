@@ -16,6 +16,7 @@ Plugin 'vim-syntastic/syntastic'
 Plugin 'kongo2002/fsharp-vim'
 Plugin 'amiralies/vim-rescript'
 Plugin 'jordwalke/vim-reasonml'
+"Plugin 'jacoborus/tender.vim'  " tender colorscheme
 
 call vundle#end()
 filetype plugin indent on
@@ -48,6 +49,10 @@ set completeopt-=preview
 " try 256 color mode if envvar is set
 set t_Co=88
 if $TERM == 'xterm-256color' | set t_Co=256 | endif
+
+if (has("termguicolors"))
+ set termguicolors
+endif
 
 " Color scheme
 "set background=dark
@@ -149,7 +154,7 @@ cmap w!! w !sudo tee % >/dev/null
 " ---------------
 
 " Some files only have 2 spaces indent
-autocmd FileType css,less,sass,html,ocaml,bib,llvm,tex,markdown set shiftwidth=2
+autocmd FileType css,less,sass,html,ocaml,bib,llvm,tex,markdown,yaml set shiftwidth=2 tabstop=2
 
 " Make pfd's readable
 autocmd BufReadPre *.pdf set ro nowrap
