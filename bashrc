@@ -58,7 +58,7 @@ else
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1="${debian_chroot:+($debian_chroot)}$USERCOLOR$USERNAME\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$INDICATOR "
+    PS1="${debian_chroot:+($debian_chroot)}$USERCOLOR$USERNAME\[\033[01;33m\]@\[\033[01;36m\]\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$INDICATOR "
 else
     PS1='${debian_chroot:+($debian_chroot)}'"$USERNAME"'\h:\w\$INDICATOR '
 fi
