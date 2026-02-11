@@ -99,6 +99,7 @@ alias avg="awk '{a+=\$1} END{print a/NR}'"
 alias json='python -mjson.tool'
 alias g='grep'
 alias h='help'
+alias dc='docker compose'
 
 # git shortcuts
 alias gs='git status'
