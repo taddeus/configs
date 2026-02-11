@@ -21,5 +21,5 @@ ln -sf $DIR/tmux.conf ~/.tmux.conf
 if which vim >/dev/null; then
     ln -sfT $DIR/vim ~/.vim
     ln -sf $DIR/vimrc ~/.vimrc
-    vim +PluginInstall +qall
+    vim +PluginClean! +PluginInstall +qall
 fi
