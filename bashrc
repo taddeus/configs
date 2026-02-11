@@ -109,9 +109,7 @@ alias grr='git pull --rebase --recurse-submodules'
 alias m='make'
 
 # apt shortcuts
-alias apt='sudo apt'
-alias api='apt install'
-alias aps='\apt search'
+alias aps='apt search'
 
 mytime () {
     `which time` -f %e $* > /dev/null
