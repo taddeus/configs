@@ -13,10 +13,7 @@ Plugin 'embear/vim-localvimrc'
 
 Plugin 'rust-lang/rust.vim'
 Plugin 'vim-syntastic/syntastic'
-Plugin 'kongo2002/fsharp-vim'
-Plugin 'amiralies/vim-rescript'
-Plugin 'jordwalke/vim-reasonml'
-"Plugin 'jacoborus/tender.vim'  " tender colorscheme
+Plugin 'jacoborus/tender.vim'  " tender colorscheme
 
 call vundle#end()
 filetype plugin indent on
@@ -29,8 +26,6 @@ let g:syntastic_python_checkers = ['flake8', 'python']
 " -------------
 " General setup
 " -------------
-
-syntax enable
 
 " Automatically remove all trailing whitespace
 "autocmd BufWritePre * :%s/\s\+$//e
@@ -54,14 +49,17 @@ if (has("termguicolors"))
  set termguicolors
 endif
 
+" For Neovim 0.1.3 and 0.1.4
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+
 " Color scheme
-"set background=dark
+syntax enable
 if &diff
     autocmd VimEnter * colorscheme blue
 else
-    colorscheme darkspectrum
-    runtime! plugin/guicolorscheme.vim
-    autocmd VimEnter * GuiColorScheme darkspectrum
+    colorscheme tender
+    " Transparent background
+    hi Normal guibg=NONE ctermbg=NONE
 endif
 
 set fileformats=unix    " obviously...
