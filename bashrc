@@ -84,9 +84,8 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # ls shortcuts
-alias ll='ls -alFh'
-alias la='ls -A'
-alias l='ls -lFh'
+alias l='ls -F --color=auto'
+alias ll='l -Alh'
 
 # ssh shortcuts for multivac
 alias mvv='mosh mv -p 8051 -- screen -Uxr'
