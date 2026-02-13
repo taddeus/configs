@@ -70,22 +70,20 @@ unset color_prompt
 # Aliases
 #
 
-# enable color support of ls and grep
+# Enable color support for dir listing
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    export LS_OPTIONS="--color=auto"
-    #alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
-
+    alias ls='ls --color=auto'
+    alias dir='dir --color=auto'
+    alias vdir='vdir --color=auto'
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
 
 # ls shortcuts
-alias l='ls -F --color=auto'
-alias ll='l -Alh'
+alias l='ls -F'
+alias ll='ls -AlhF'
 
 # ssh shortcuts for multivac
 alias mvv='mosh mv -p 8051 -- screen -Uxr'
