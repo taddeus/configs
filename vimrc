@@ -13,7 +13,6 @@ Plugin 'embear/vim-localvimrc'
 
 Plugin 'rust-lang/rust.vim'
 Plugin 'vim-syntastic/syntastic'
-Plugin 'jacoborus/tender.vim'  " tender colorscheme
 
 call vundle#end()
 filetype plugin indent on
@@ -57,7 +56,7 @@ syntax enable
 if &diff
     autocmd VimEnter * colorscheme blue
 else
-    colorscheme tender
+    colorscheme darkspectrum
     " Transparent background
     hi Normal guibg=NONE ctermbg=NONE
 endif
