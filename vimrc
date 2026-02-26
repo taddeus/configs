@@ -20,7 +20,7 @@ filetype plugin indent on
 let g:syntastic_python_flake8_exec = 'python3'
 let g:syntastic_python_flake8_args = ['-m', 'flake8']
 let g:syntastic_python_python_exec = 'python3'
-let g:syntastic_python_checkers = ['flake8', 'python']
+let g:syntastic_python_checkers = ['python', 'flake8']
 
 " -------------
 " General setup
