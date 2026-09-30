@@ -8,19 +8,15 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
-
 Plugin 'embear/vim-localvimrc'
-
 Plugin 'rust-lang/rust.vim'
 Plugin 'vim-syntastic/syntastic'
 
+" standard python highlighting is broken for f-strings
+Plugin 'vim-python/python-syntax'
+
 call vundle#end()
 filetype plugin indent on
-
-let g:syntastic_python_flake8_exec = 'python3'
-let g:syntastic_python_flake8_args = ['-m', 'flake8']
-let g:syntastic_python_python_exec = 'python3'
-let g:syntastic_python_checkers = ['python', 'flake8']
 
 " -------------
 " General setup
@@ -58,13 +54,13 @@ if &diff
 else
     colorscheme darkspectrum
     " Transparent background
-    hi Normal guibg=NONE ctermbg=NONE
+    highlight Normal guibg=NONE ctermbg=NONE
 endif
 
 set fileformats=unix    " obviously...
 set ruler               " show cursor location
 set modeline            " read modelines
-set number              " show line numbers
+"set number              " show line numbers
 set title               " change the terminal's title
 set nocompatible        " disable Vi-compatibility
 set laststatus=2        " always display filename
@@ -93,6 +89,22 @@ set wildignore=*.swp,*.bak,*.pyc,*.class,*.o,*.bc,*.old,*.cmi,*.cmx,*.aux
 " File explorer
 let g:netrw_liststyle=3  " Use tree-mode as default view
 let g:netrw_preview=1    " Preview window shown in a vsplit
+
+" Customize Python syntax highlighting
+let g:python_highlight_all = 1
+let g:python_highlight_func_calls = 0
+highlight pythonConditional cterm=bold gui=bold
+highlight pythonException cterm=bold gui=bold
+highlight pythonImport cterm=bold gui=bold
+highlight pythonOperator cterm=bold gui=bold
+highlight pythonRaiseFromStatement cterm=bold gui=bold
+highlight pythonRepeat cterm=bold gui=bold
+highlight pythonStatement cterm=bold gui=bold
+
+let g:syntastic_python_flake8_exec = 'python3'
+let g:syntastic_python_flake8_args = ['-m', 'flake8']
+let g:syntastic_python_python_exec = 'python3'
+let g:syntastic_python_checkers = ['python', 'flake8']
 
 " ---------
 " Searching
