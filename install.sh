@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+set -euo pipefail
+
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 if ! which git >/dev/null; then
@@ -7,12 +9,11 @@ if ! which git >/dev/null; then
 fi
 
 # git
-git submodule update --init
+git -C $DIR submodule update --init
 ln -sf $DIR/gitconfig ~/.gitconfig
 
 # bash
 ln -sf $DIR/bashrc ~/.bashrc
-source ~/.bashrc
 
 # tmux
 ln -sf $DIR/tmux.conf ~/.tmux.conf
