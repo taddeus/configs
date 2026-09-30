@@ -190,7 +190,7 @@ autocmd BufNewFile,BufRead *.dis set filetype=dis
 highlight SpellBad guisp=#fcaf3e cterm=underline
 
 " Auto enable spellchecking for text-based files
-autocmd FileType tex,markdown setlocal spell nonu
+autocmd FileType tex setlocal spell nonu
 
 " 2 spaces for tabs in CSS/YAML
 autocmd FileType css,yaml set sw=2
