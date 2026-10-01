@@ -2,7 +2,7 @@
 set -euo pipefail
 
 INSTALL_ALL=0
-if [ "$1" = "-a" ]; then INSTALL_ALL=1 fi
+if [ "$1" = "-a" ]; then INSTALL_ALL=1; fi
 
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
