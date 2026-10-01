@@ -84,6 +84,7 @@ fi
 # ls shortcuts
 alias l='ls -F'
 alias ll='ls -AlhF'
+alias lla='ls -alhF'
 
 # ssh shortcuts for multivac
 alias mvv='mosh mv -p 8051 -- screen -Uxr'
@@ -97,6 +98,7 @@ alias json='python -mjson.tool'
 alias g='grep'
 alias h='help'
 alias dc='docker compose'
+alias pc='podman compose'
 
 # git shortcuts
 alias gs='git status'
@@ -150,6 +152,14 @@ export TERM="xterm-256color"
 export EDITOR=vim
 
 export PATH=$HOME/.local/bin:$PATH:/sbin:/usr/sbin
+
+#
+# SSH agent
+#
+
+if [ -S "$XDG_RUNTIME_DIR/openssh_agent" ]; then
+    export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/openssh_agent"
+fi
 
 #
 # local, installation-specific config

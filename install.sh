@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+INSTALL_ALL=0
+if [ "$1" = "-a" ]; then INSTALL_ALL=1 fi
+
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 if ! which git >/dev/null; then
@@ -17,6 +20,9 @@ ln -sf $DIR/bashrc ~/.bashrc
 
 # tmux
 ln -sf $DIR/tmux.conf ~/.tmux.conf
+if [ $INSTALL_ALL -eq 1 ]; then
+    ln -sf $DIR/tmux.ssh-agent.conf ~/.tmux.ssh-agent.conf
+fi
 
 # vim
 if which vim >/dev/null; then
