@@ -69,7 +69,7 @@ set scrolloff=5         " always keep current line five lines off the screen edg
 
 " Tabs are for heathens, we indent with spaces
 set expandtab smarttab
-set shiftwidth=4 tabstop=8 softtabstop=-1
+set shiftwidth=4 tabstop=4 softtabstop=-1
 set autoindent copyindent
 set shiftround
 set backspace=indent,eol,start
@@ -163,7 +163,7 @@ cmap w!! w !sudo tee % >/dev/null
 " ---------------
 
 " Some files only have 2 spaces indent
-autocmd FileType css,less,sass,html,ocaml,bib,llvm,tex,markdown,yaml set shiftwidth=2 tabstop=2
+autocmd FileType css,less,sass,html,ocaml,bib,llvm,tex,markdown,yaml,sshconfig set shiftwidth=2 tabstop=2
 
 " Make pfd's readable
 autocmd BufReadPre *.pdf set ro nowrap
